@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+  integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+  crossorigin="anonymous"
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap"
+  rel="stylesheet"
+/>
+<link rel="stylesheet" href="css/style.css" />
+<title>Cake'n More</title>
+</head>
+
+<body>
+<!-- Header-->
+
+<span id="navbar-toggle">
+  <i class="fas fa-bars"></i>
+</span>
+<nav class="navbar bg-main">
+  <h1>
+    <img src="img/derrin_new_logo (1).png" class="logo" alt="" />
+  </h1>
+  <ul id="main-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="promo.html">Promo</a></li>
+    <li><a  class="current" href="pricing.html">Pricing</a></li>
+    <li><a  href="login.html">Login</a></li>
+  </ul>
+</nav>
+</head>
+<section id="pricing">
+  <h1 class="pricing-heading">our pricing</h1>
+  <div class="pricing">
+    <div class="card" >
+      <div class="cardImg">
+        <img src="img/pricing-cake2.jpg" alt="">
+      </div>
+      <div class="layout">
+        <p>Triple layered moist red velvet cake</p>
+        <p>₦20000</p>
+      </div>
+      <div class="cardBtn">
+        <button class="bttn" id="open">order Now</button>
+      </div>
+    </div>
+        
+    <div class="card">
+      <div class="cardImg">
+        <img src="img/pricing-cake1.jpg" alt="">
+      </div>
+      <div class="layout">
+        <p>Triple layered moist chocolate cake</p>
+        <p>₦14000</p>
+      </div>
+      <div class="cardBtn">
+        <button class="bttn" id="open">order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cardImg">
+        <img src="img/Triple layered Moist milky vanilla cake.jpg" alt="">
+      </div>
+      <div class="layout">
+        <p>Triple Layered MustyMilk</p>
+        <p>₦3000</p>
+      </div>
+      <div class="cardBtn">
+        <button class="bttn" id="open">order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cardImg">
+        <img src="img/phmcw6dq3km.jpg" alt="">
+      </div>
+      <div class="layout">
+        <p>Laced butter cakes</p>
+        <p>₦3000</p>
+      </div>
+      <div class="cardBtn">
+        <button class="bttn" id="open">order Now</button>
+      </div>
+    </div>
+   
+    <div class="card">
+      <div class="cardImg">
+        <img src="img/productImages (1).jpg" alt="">
+      </div>
+      <div class="layout">
+        <p>Double layered Moist milky vanilla cake</p>
+        <p>₦12000</p>
+      </div>
+      <div class="cardBtn">
+        <button class="bttn" id="open">order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cardImg">
+        <img src="img/pricing-cake7.jpg" alt="">
+      </div>
+      <div class="layout">
+        <p>Triple layered moist chocolate cake</p>
+        <p>₦14000</p>
+      </div>
+      <div class="cardBtn">
+        <button class="bttn" id="open">order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cardImg">
+        <img src="img/pricing-cake7.jpg" alt="">
+      </div>
+      <div class="layout">
+        <p>Double layered Moist milky vanilla cake</p>
+        <p>₦14000</p>
+      </div>
+      <div class="cardBtn">
+        <button class="bttn" id="open">order Now</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cardImg">
+        <img src="img/Triple layered Moist milky vanilla cake (1).jpg" alt="">
+      </div>
+      <div class="layout">
+        <p>Double layered Moist milky vanilla cake</p>
+        <p>₦14000</p>
+      </div>
+      <div class="cardBtn">
+        <button class="bttn" id="open">order Now</button>
+      </div>
+    </div>
+  </div>
+
+
+     <!-- Modal -->
+  <div class="modal-container" data-target="1" id="modal">
+    <div class="modal">
+      <button class="close-btn" id="close">
+        <i class="fa fa-times"></i> 
+      </button>
+      
+      <div class="modal-content">
+        <div class="modal-content__image">
+          <img src="" alt="" class="modalImage">
+        </div>
+        <h1 class="modalDesc"></h1>
+        <h2> unit price: <span id="unit">  ₦3000</span></h2>
+        <h2> total price: <span id="total">  ₦3000</span></h2>
+        <p>Register with us to get offers, support and more</p>
+        
+        <form  id="form" class="modal-form">
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter Name"
+              class="form-input"
+            />
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input
+              type="tel"
+              id="tel"
+              placeholder="Phone Number"
+              class="form-input"
+            />
+          </div>
+          <div>
+            <label for="Quantity">Quantity</label>
+            <input
+              type="quantity"
+              id="quantity"
+              placeholder="1"
+              class="form-input"
+            />
+          </div>
+          
+          <input type="submit" value="Submit" id="sub" class="btttn" />
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+ <!--Footer-->
+ <footer>
+  <div class="footer">
+    <div>
+      <img src="img/derrin_new_logo (1).png" class="logoo" alt="" />
+    </div>
+    <div class="py-2">
+      <i class="fas fa-map-marker py">
+        Beside Matrix Filling Station, Otokutu, Delta State
+      </i>
+      <i class="fas fa-phone py"> (0)813-031-4493</i>
+      <i class="fas fa-envelope py"> Ameh.clinton@gmail.com</i>
+    </div>
+    <div class="py-2 my-1 lead">
+      <h3 class="my">About The Company</h3>
+      <p>
+        We're the No. 1 Online Bakeshop and we deliver delectable cakes and
+        confectioners at very affordable prices. We're your plug for
+        everything flour, butter, eggs and sugar..
+      </p>
+      <div class="social my">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    </div>
+  </div>
+  <p>Code$Ville&copy; 2020</p>
+</footer>
+
+
+  
+
+    <script src="main.js"></script>
+
+  
+</body>
+</html>
