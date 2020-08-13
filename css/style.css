@@ -33,8 +33,85 @@ body {
   margin: 1rem 6rem;
 }
 
+.toggle-button{
+  width: 3rem;
+  padding: 0 0.3rem;
+  background: -webkit-linear-gradient(45deg, #87ae20, #3b8e39);
+  background: linear-gradient(45deg, #87ae20, #3b8e39);
+  border: none;
+  top: 2.5%;
+  left: 3.5%;
+  position: absolute;
+  z-index: 8;
+  cursor: pointer;
+}
 
+.toggle-button__bar{
+  width: 100%;
+  height: 0.2rem;
+  background: #e9f9e8;
+  display: block;
+  margin: 0.6rem 0;
+}
 
+@media only screen and (min-width: 500px) {
+  .toggle-button__bar {
+    display: none;
+  }
+}
+
+.sideDrawer-button{
+  position: fixed;
+  z-index: 8;
+  width: 100%;
+  top: 2.5%;
+}
+
+.main-nav__mobile{
+  background: -webkit-linear-gradient(45deg, #4ff26a, #55c668);
+  background: linear-gradient(45deg, #4ff26a, #55c668);
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 11;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 1rem 0;
+  z-index: 10000000;
+  overflow-x: hidden;
+}
+
+.main-nav__mobile a{
+  border-bottom: 1px solid #35442d;
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  text-decoration: none;
+  color: #fcf7f7;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  font-weight: 400;
+  font-size: 20px;
+  display: block;
+}
+
+.mobile-nav__items{
+  margin-top: 2rem;
+}
+
+.closing-button{
+  font-size: 42px;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+.closing-button a{
+  border-bottom: none;
+  font-size: 42px;
+}
 
 .navbar {
   background: var(--light-color);
@@ -751,7 +828,7 @@ Result *,
   display: flex;
 }
 
-.backdrop {
+.pricingBackdrop, .backdrop {
   position: fixed;
   width: 100%;
   height: 100%;

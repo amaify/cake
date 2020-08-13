@@ -19,21 +19,55 @@
 
   <body>
     <!-- Header-->
+    <div class="backdrop"></div>
+    <header>
+      <span id="navbar-toggle">
+        <i class="fas fa-bars"></i>
+      </span>
+      <nav class="navbar bg-main">
+        <h1>
+          <img src="img/derrin_new_logo (1).png" class="logo" alt="" />
+        </h1>
+        <ul id="main-nav">
+          <li><a class="current" href="index.html">Home</a></li>
+          <li><a href="promo.html">Promo</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
 
-    <span id="navbar-toggle">
-      <i class="fas fa-bars"></i>
-    </span>
-    <nav class="navbar bg-main">
-      <h1>
-        <img src="img/derrin_new_logo (1).png" class="logo" alt="" />
-      </h1>
-      <ul id="main-nav">
-        <li><a class="current" href="index.html">Home</a></li>
-        <li><a href="promo.html">Promo</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
+      <div class="sideDrawer-button">
+        <button id="toggle" class="toggle-button">
+          <span class="toggle-button__bar"></span>
+          <span class="toggle-button__bar"></span>
+          <span class="toggle-button__bar"></span>
+      </button>
+
+    </div>
+      <nav id="mobileNav" class="main-nav__mobile">
+        <div class="closing-button">
+          <a href="javascript:void(0)" class="closebtn">&times;</a>
+        </div>
+
+        <div class="mobile-nav__items">
+          <a href="index.html" class="active">
+            Home
+          </a>
+
+          <a href="./about/about.html">
+            About Us
+          </a>
+
+          <a href="services/services.html">
+            Services
+          </a>
+
+          <a href="./contact/contact.html">
+            Contact Us
+          </a>
+        </div>
+      </nav>
+    </header>
     <!--Section-A-->
 
     <section id="a">
@@ -141,5 +175,6 @@
       </div>
       <p>Code$Ville &copy; 2020</p>
     </footer>
+    <script src="./index.js"></script>
   </body>
 </html>

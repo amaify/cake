@@ -92,7 +92,7 @@ const modal = document.querySelector(".modal");
 
 // e.preventDefault();
 // });
-const backdrop = document.querySelector(".backdrop");
+const pricingBackdrop = document.querySelector(".pricingBackdrop");
 
 const orderBtn = document.querySelectorAll(".bttn");
 const modalImg = document.querySelector(".modalImage");
@@ -110,7 +110,7 @@ document.querySelector(".decrease").addEventListener("click", decrement);
 orderBtn.forEach((order) => {
   order.addEventListener("click", () => {
     modal.classList.add("display-modal");
-    backdrop.classList.add("show-backdrop");
+    pricingBackdrop.classList.add("show-backdrop");
     quantity.value = Number("1"); //Resets the quantity when we open the modal
     let cardImg = order.parentElement.parentElement.children[0].children[0].getAttribute(
       "src"
@@ -153,7 +153,7 @@ function decrement() {
 }
 
 function removeModal() {
-  backdrop.classList.remove("show-backdrop");
+  pricingBackdrop.classList.remove("show-backdrop");
   modal.classList.remove("display-modal");
   let qty = parseInt(quantity.value, 10);
   qty = 1; //Reset the Quantity to 1 after closing the modal
@@ -170,7 +170,7 @@ window.addEventListener("load", () => {
 });
 
 // Hide modal on outside click
-backdrop.addEventListener("click", removeModal);
+pricingBackdrop.addEventListener("click", removeModal);
 
 // Hide modal
 closeBtn.addEventListener("click", removeModal);
