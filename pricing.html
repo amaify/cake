@@ -19,7 +19,7 @@
 
 <body>
 <!-- Header-->
-
+<div class="backdrop"></div>
 <span id="navbar-toggle">
   <i class="fas fa-bars"></i>
 </span>
@@ -44,7 +44,7 @@
       </div>
       <div class="layout">
         <p>Triple layered moist red velvet cake</p>
-        <p>₦20000</p>
+        <p id="price">20000</p>
       </div>
       <div class="cardBtn">
         <button class="bttn" id="open">order Now</button>
@@ -57,7 +57,7 @@
       </div>
       <div class="layout">
         <p>Triple layered moist chocolate cake</p>
-        <p>₦14000</p>
+        <p id="price">14000</p>
       </div>
       <div class="cardBtn">
         <button class="bttn" id="open">order Now</button>
@@ -70,7 +70,7 @@
       </div>
       <div class="layout">
         <p>Triple Layered MustyMilk</p>
-        <p>₦3000</p>
+        <p id="price">3000</p>
       </div>
       <div class="cardBtn">
         <button class="bttn" id="open">order Now</button>
@@ -83,7 +83,7 @@
       </div>
       <div class="layout">
         <p>Laced butter cakes</p>
-        <p>₦3000</p>
+        <p id="price">3000</p>
       </div>
       <div class="cardBtn">
         <button class="bttn" id="open">order Now</button>
@@ -96,7 +96,7 @@
       </div>
       <div class="layout">
         <p>Double layered Moist milky vanilla cake</p>
-        <p>₦12000</p>
+        <p id="price">12000</p>
       </div>
       <div class="cardBtn">
         <button class="bttn" id="open">order Now</button>
@@ -109,7 +109,7 @@
       </div>
       <div class="layout">
         <p>Triple layered moist chocolate cake</p>
-        <p>₦14000</p>
+        <p id="price">14000</p>
       </div>
       <div class="cardBtn">
         <button class="bttn" id="open">order Now</button>
@@ -122,7 +122,7 @@
       </div>
       <div class="layout">
         <p>Double layered Moist milky vanilla cake</p>
-        <p>₦14000</p>
+        <p id="price">14000</p>
       </div>
       <div class="cardBtn">
         <button class="bttn" id="open">order Now</button>
@@ -135,7 +135,7 @@
       </div>
       <div class="layout">
         <p>Double layered Moist milky vanilla cake</p>
-        <p>₦14000</p>
+        <p id="price">14000</p>
       </div>
       <div class="cardBtn">
         <button class="bttn" id="open">order Now</button>
@@ -145,7 +145,6 @@
 
 
      <!-- Modal -->
-  <div class="modal-container" data-target="1" id="modal">
     <div class="modal">
       <button class="close-btn" id="close">
         <i class="fa fa-times"></i> 
@@ -156,44 +155,49 @@
           <img src="" alt="" class="modalImage">
         </div>
         <h1 class="modalDesc"></h1>
-        <h2> unit price: <span id="unit">  ₦3000</span></h2>
-        <h2> total price: <span id="total">  ₦3000</span></h2>
+        <h2> unit price: &#8358;<span id="unit">  </span></h2>
+        <h2> total price: &#8358;<span id="total"> </span></h2>
         <p>Register with us to get offers, support and more</p>
         
         <form  id="form" class="modal-form">
-          <div>
-            <label for="name">Name</label>
+          <div class="modal-formGroup">
+            <!-- <label for="name" class="label">Name</label> -->
             <input
               type="text"
               id="name"
-              placeholder="Enter Name"
+              placeholder="Name"
               class="form-input"
             />
           </div>
-          <div>
-            <label for="phone">Phone</label>
+
+          <div class="modal-formGroup">
+            <!-- <label for="phone" class="label">Phone</label> -->
             <input
               type="tel"
               id="tel"
-              placeholder="Phone Number"
+              placeholder="Number"
               class="form-input"
             />
           </div>
+
           <div>
-            <label for="Quantity">Quantity</label>
-            <input
-              type="quantity"
-              id="quantity"
-              placeholder="1"
-              class="form-input"
-            />
+            <label for="quantity">Quantity</label>
+            <div class="itemQty">
+              <a class="qtyBtn decrease"><i class="fa fa-minus-square fa-2x"></i></a>
+              <input
+                type="text"
+                id="quantity"
+                value="1"
+                class="form-input"
+              />
+              <a class="qtyBtn increase"><i class="fa fa-plus-square fa-2x"></i></a>
+            </div>
           </div>
           
           <input type="submit" value="Submit" id="sub" class="btttn" />
         </form>
       </div>
     </div>
-  </div>
 </section>
  <!--Footer-->
  <footer>

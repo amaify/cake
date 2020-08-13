@@ -1,13 +1,14 @@
-const close = document.getElementById("close");
+const closeBtn = document.getElementById("close");
 const open = document.getElementById("open");
-const modal = document.getElementById("modal");
 const unit = document.getElementById("unit").value;
 const total = document.getElementById("total");
 const name = document.getElementById("name");
 const tel = document.getElementById("tel").value;
-const quantity = document.getElementById("quantity").value;
+// const quantity = document.getElementById("quantity").value;
 const form = document.getElementById("form");
 const submitBtn = document.querySelector("#submitBtn");
+
+const modal = document.querySelector(".modal");
 
 // document.getElementById("email").addEventListener("blur", validateEmail);
 // document.getElementById("password").addEventListener("blur", validatePassword);
@@ -91,37 +92,85 @@ const submitBtn = document.querySelector("#submitBtn");
 
 // e.preventDefault();
 // });
+const backdrop = document.querySelector(".backdrop");
 
 const orderBtn = document.querySelectorAll(".bttn");
 const modalImg = document.querySelector(".modalImage");
 const modalDesc = document.querySelector(".modalDesc");
 const unitPrice = document.querySelector("#unit");
 const totalPrice = document.querySelector("#total");
+const quantity = document.querySelector("#quantity");
 
-orderBtn.forEach((order, index) => {
+const inputValue = document.querySelectorAll(".form-input");
+
+document.querySelector(".increase").addEventListener("click", increment);
+
+document.querySelector(".decrease").addEventListener("click", decrement);
+
+orderBtn.forEach((order) => {
   order.addEventListener("click", () => {
-    console.log(index);
-    modal.classList.add("show-modal");
+    modal.classList.add("display-modal");
+    backdrop.classList.add("show-backdrop");
+    quantity.value = Number("1"); //Resets the quantity when we open the modal
     let cardImg = order.parentElement.parentElement.children[0].children[0].getAttribute(
       "src"
     );
     let cakeDesc =
       order.parentElement.parentElement.children[1].children[0].innerHTML;
 
-    let cakePrice =
+    //This cakePrice here is set to a global Variable so as to give
+    //The increment and decrement function access to it.
+    cakePrice =
       order.parentElement.parentElement.children[1].children[1].innerHTML;
 
     modalImg.setAttribute("src", cardImg);
     modalDesc.innerHTML = cakeDesc;
     unitPrice.innerHTML = cakePrice;
+
     totalPrice.innerHTML = cakePrice;
   });
 });
 
-// Hide modal on outside click
-window.addEventListener("click", (e) => {
-  e.target == modal ? modal.classList.remove("show-modal") : false;
+function increment() {
+  let qty = parseInt(quantity.value, 10);
+  if (qty <= 9) {
+    //Ensures that the Quantity Value doesn't go above 10
+    qty++;
+    quantity.value = qty;
+    totalPrice.innerHTML = Number(cakePrice) * Number(quantity.value);
+  }
+}
+
+function decrement() {
+  let qty = parseInt(quantity.value, 10); //This Converts our Quantity Value from string to Number
+
+  if (qty > 1) {
+    //This ensures that the Quantity Value doesn't go below 1
+    qty = qty - 1;
+    quantity.value = qty;
+    totalPrice.innerHTML = Number(cakePrice) * Number(quantity.value);
+  }
+}
+
+function removeModal() {
+  backdrop.classList.remove("show-backdrop");
+  modal.classList.remove("display-modal");
+  let qty = parseInt(quantity.value, 10);
+  qty = 1; //Reset the Quantity to 1 after closing the modal
+  totalPrice.innerHTML = cakePrice; //Reset total Price to Unit Price on Modal Close
+
+  //Resetting the form after closing the modal
+  for (let i = 0; i < inputValue.length; i++) {
+    inputValue[i].value = "";
+  }
+}
+
+window.addEventListener("load", () => {
+  quantity.value = Number("1");
 });
 
+// Hide modal on outside click
+backdrop.addEventListener("click", removeModal);
+
 // Hide modal
-close.addEventListener("click", () => modal.classList.remove("show-modal"));
+closeBtn.addEventListener("click", removeModal);

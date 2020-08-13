@@ -618,27 +618,18 @@ Result *,
 }
 
 .btttn {
-  text-decoration: none;
-  display: block;
   background: var(--primary-color);
-  text-align: center;
   color: #fff;
   width: 40%;
   margin: 0 auto;
   margin-top: 1rem;
   outline: none;
   padding: 10px 15px;
-  border-radius: 15px;
+  border-radius: 8px;
+  cursor: pointer;
   border: none;
-
+  outline: none;
 }
-
-/* .card img {
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-} */
-
 
 .pricing-heading {
   text-align: center;
@@ -656,9 +647,8 @@ Result *,
 .modal-content__image {
   width: 100%;
   height: 400px;
-  padding: 1.5rem 0.5rem;
-  margin-bottom: 10px;
-  /* color: rgba(0, 0, 0, .87); */
+  padding: 1.5rem 0.5rem 0 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .modal-content__image img {
@@ -668,23 +658,32 @@ Result *,
 }
 
 .modal-content .modalDesc {
-  color: rgba(0, 0, 0, .87);
-  font-size: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  text-transform: capitalize;
+  /* font-family: "Montserrat", sans-serif; */
   color: var(--primary-color);
-  margin: 0 0 16px;
 }
 
 .modal-content h2 {
-  color: #000;
+  color: #242222;
+  font-size: 1.2rem;
   text-transform: capitalize;
-  font-family: Montserrat, sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+}
+
+.modal-content p {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  /* font-family: "Montserrat", sans-serif; */
 }
 
 .modal-content span {
   color: var(--primary-color);
 }
 
-.modal-form input[type='text'],
+/* .modal-form input[type='text'],
 .modal-form input[type='tel'],
 .modal-form input[type='quantity'] {
   display: block;
@@ -696,78 +695,113 @@ Result *,
   border: none;
   border-width: 100%;
   border-bottom: 1px solid black;
+} */
+.modal-form {
+  margin-top: 1.3rem;
 }
 
-.modal-container {
-  background-color: rgba(0, 0, 0, 0.6);
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+.modal-formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.modal-formGroup input {
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  padding-bottom: 0.4rem;
+  font-size: 1rem;
+  color: #3f3d3d;
+}
+
+.modal-formGroup input:focus {
+  border-bottom-color: rgb(32, 143, 143);
+}
+
+.modal-formGroup input::placeholder {
+  font-size: 1rem;
+}
+
+.itemQty {
+  display: flex;
+  width: 50%;
+}
+
+.itemQty #quantity {
+  width: 100%;
+  color: var(--dark-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.1rem 0.4rem;
+}
+
+.qtyBtn {
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.increase {
+  margin-left: 0.2rem;
+}
+
+.decrease {
+  margin-right: 0.2rem;
 }
 
 .modal-container.show-modal {
   display: flex;
 }
 
-.modal {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  position: absolute;
-  overflow: hidden;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  width: 600px;
-  height: 400px;
-  overflow: scroll;
-  animation-name: modalopen;
-  animation-duration: var(--modal-duration);
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(0, 0, 0, .8);
+  z-index: 1000;
 }
 
+.show-backdrop {
+  display: block;
+}
 
+.modal {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  height: 80%;
+  overflow-y: scroll;
+  z-index: 10000;
+  transition: all .8s;
+  font-family: "Montserrat", sans-serif;
+}
+
+.display-modal {
+  opacity: 1;
+  visibility: visible;
+  top: 50%;
+}
 
 .modal-content {
   padding: 1rem 1.5rem 2.5rem 1.5rem;
-}
-
-.modal-form div {
-  margin: 15px 0;
-}
-
-.modal-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.modal-form .form-input {
-  padding: 8px;
-  width: 100%;
 }
 
 .close-btn {
   background: transparent;
   font-size: 25px;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 2%;
+  right: 2%;
   color: var(--primary-color);
   outline: none;
   border: none;
-}
-
-@keyframes modalopen {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
 }
 
 @media(max-width:900px) {
