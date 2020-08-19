@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous"
+  />
   <link
-  rel="stylesheet"
-  href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
-  integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-  crossorigin="anonymous"
-/>
-<link
-  href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap"
-  rel="stylesheet"
-/>
-<link rel="stylesheet" href="css/style.css" />
-<title>Cake'n More</title>
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,400;0,700;1,500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- <link rel="stylesheet" href="./pricing.css"> -->
+  <title>Cake'n More</title>
 </head>
 
 <body>
 <!-- Header-->
-<div class="pricingBackdrop"></div>
-<span id="navbar-toggle">
-  <i class="fas fa-bars"></i>
-</span>
-<nav class="navbar bg-main">
-  <h1>
-    <img src="img/derrin_new_logo (1).png" class="logo" alt="" />
-  </h1>
-  <ul id="main-nav">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="promo.html">Promo</a></li>
-    <li><a  class="current" href="pricing.html">Pricing</a></li>
-    <li><a  href="login.html">Login</a></li>
-  </ul>
-</nav>
+  <div class="pricingBackdrop"></div>
+  <span id="navbar-toggle">
+    <i class="fas fa-bars"></i>
+  </span>
+
+  <nav class="navbar bg-main">
+    <h1>
+      <img src="img/derrin_new_logo (1).png" class="logo" alt="" />
+    </h1>
+    <ul id="main-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="promo.html">Promo</a></li>
+      <li><a  class="current" href="pricing.html">Pricing</a></li>
+      <li><a  href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
 </head>
+
 <section id="pricing">
   <h1 class="pricing-heading">our pricing</h1>
   <div class="pricing">
@@ -202,17 +206,36 @@
  <!--Footer-->
  <footer>
   <div class="footer">
-    <div>
+    <div class="footer-div">
       <img src="img/derrin_new_logo (1).png" class="logoo" alt="" />
     </div>
-    <div class="py-2">
-      <i class="fas fa-map-marker py">
+    <div class="py-2 footer-div">
+      <p class="contact">
+        <span class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </span>
+        <span class="contact-text">Beside Matrix Filling Station, Otokutu, Delta State</span>
+      </p>
+      <!-- <i class="fas fa-map-marker-alt py">
         Beside Matrix Filling Station, Otokutu, Delta State
-      </i>
-      <i class="fas fa-phone py"> (0)813-031-4493</i>
-      <i class="fas fa-envelope py"> Ameh.clinton@gmail.com</i>
+      </i> -->
+      <p class="contact">
+        <span class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </span>
+        <span class="contact-text">(0)813-031-4493</span>
+      </p>
+
+      <p class="contact">
+        <span class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </span>
+        <span class="contact-text">Ameh.clinton@gmail.com</span>
+      </p>
+      <!-- <i class="fas fa-phone py"> (0)813-031-4493</i>
+      <i class="fas fa-envelope py"> Ameh.clinton@gmail.com</i> -->
     </div>
-    <div class="py-2 my-1 lead">
+    <div class="py-2 my-1 lead footer-div" id="footer-last">
       <h3 class="my">About The Company</h3>
       <p>
         We're the No. 1 Online Bakeshop and we deliver delectable cakes and
@@ -226,7 +249,7 @@
       </div>
     </div>
   </div>
-  <p>Code$Ville&copy; 2020</p>
+  <p class="watermark">Code$Ville&copy; 2020</p>
 </footer>
 
 
